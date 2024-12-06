@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Clean env') {
             steps {
-                sh "ls Trainig && rm -rf Training || echo ok"
+                sh "ls Training && rm -rf Training || echo ok"
             }
         }
         stage('Get Source') {
