@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Clean env') {
             steps {
-                sh "ls base_git && rm -rf base_git || echo ok"
+                sh "ls Trainig && rm -rf Training || echo ok"
             }
         }
         stage('Get Source') {
@@ -19,7 +19,7 @@ pipeline {
         }
         stage('Launch') {
             steps {
-                sh 'cd base_git && ./hello'
+                sh 'cd Training && ./hello'
             }
         }
     }
