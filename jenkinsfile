@@ -14,7 +14,7 @@ pipeline {
         }
         stage('Compile') {
             steps {
-                sh 'cd base_git && gcc hello.c -o hello'
+                sh 'cd Training && gcc hello.c -o hello'
             }
         }
         stage('Launch') {
