@@ -9,7 +9,7 @@ pipeline {
         }
         stage('Get Source') {
             steps {
-                sh 'git clone "https://github.com/H3B4BWFN/base_git"'
+                sh 'git clone "https://github.com/SanaRANN/Training"'
             }
         }
         stage('Compile') {
