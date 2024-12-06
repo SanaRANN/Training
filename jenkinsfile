@@ -1,0 +1,26 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('Clean env') {
+            steps {
+                sh "ls base_git && rm -rf base_git || echo ok"
+            }
+        }
+        stage('Get Source') {
+            steps {
+                sh 'git clone "https://github.com/H3B4BWFN/base_git"'
+            }
+        }
+        stage('Compile') {
+            steps {
+                sh 'cd base_git && gcc hello.c -o hello'
+            }
+        }
+        stage('Launch') {
+            steps {
+                sh 'cd base_git && ./hello'
+            }
+        }
+    }
+}
